@@ -1,0 +1,304 @@
+.wrapper1 {
+  width: auto;
+  margin: 0 auto;
+}
+
+.navbar1 ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-collapse: collapse;
+  text-decoration: none;
+}
+
+.wrapper1 ul {
+  list-style: none;
+  margin-top: 2%;
+  text-decoration: none;
+}
+
+.wrapper1 ul li {
+  width: 170px;
+  border: 1px solid #fff;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  color: #fff;
+  font-size: 25px;
+  position: relative;
+  border: 1px solid black;
+}
+
+.wrapper1 ul li:hover {
+  background: crimson;
+}
+
+.wrapper1 ul ul {
+  display: none;
+  background-color: crimson;
+}
+
+.wrapper1 ul li:hover>ul {
+  display: block;
+}
+
+.wrapper1 ul ul ul {
+  margin-left: 170px;
+  top: 0;
+  position: absolute;
+  background-color: crimson;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar2 {
+  background-color: whitesmoke;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 25rem;
+}
+
+.search-button {
+  background-color: rgb(233, 236, 47);
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-buttons button {
+  background-color: rgb(233, 236, 47);
+  color: black;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background-color: red;
+  color: black;
+}
+
+.arrange-left {
+  float: left;
+}
+
+.wid-25 {
+  width: 25%;
+}
+
+.wid-50 {
+  width: 50%;
+}
+
+span {
+  color: rgb(233, 236, 47);
+  ;
+}
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+
+}
+
+.footer-categories {
+  display: flex;
+}
+
+.footer-category {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-category h4 {
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-category ul li {
+  margin-bottom: 5px;
+}
+
+.footer-category ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.footer-category ul li a:hover {
+  color: #007bff;
+}
+
+.footer-links {
+  flex: 1;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.cover-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 45rem;
+}
+
+.cover-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.slogan {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  /* Add a text shadow effect */
+}
+.f-links{
+  text-decoration: none;
+  color: white;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  margin: 0 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin-top: 5px;
+}
+
+.card button {
+  margin-top: 15px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+
+  /* Adjust the header for smaller screens */
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nav-buttons {
+    margin-top: 10px;
+  }
+
+  .cart-button,
+  .login-button {
+    margin: 5px;
+  }
+  .footer-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-category {
+    flex: 0 0 50%; /* Two columns on smaller screens */
+    max-width: 50%;
+    padding: 10px;
+}
+
+.footer-links {
+    flex: 0 0 100%; /* Single column on smaller screens */
+    max-width: 100%;
+    padding: 10px;
+}
+}

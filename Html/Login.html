@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<style>
+  /*set border to the form*/
+
+  form {
+    border: 3px solid #f1f1f1;
+  }
+
+  /*assign full width inputs*/
+
+  input[type=email],
+  input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /*set a style for the buttons*/
+
+  button {
+    background-color: rgb(233, 236, 47);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  /* set a hover effect for the button*/
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  /*set padding to the container*/
+
+  .container {
+    padding: 16px;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: auto;
+  }
+
+  /*set the forgot password text*/
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+  }
+
+  /*set styles for span on small screens*/
+
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  }
+</style>
+
+<body>
+
+  <h2>Login </h2>
+  <form id="loginForm">
+    <div class="container">
+      <label for="email"><b>Email:</b></label><br>
+      <input type="email" placeholder="Enter your email" id="email" required>
+
+      <br>
+      <label for="password"><b>Password:</b></label><br>
+      <input type="password" placeholder="Enter your Password" id="password" required>
+
+      <button type="submit">Login</button>
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+
+          if (email === 'admin@admin.com' && password === '123456') {
+            alert('Login successful');
+          } else {
+            alert('Incorrect email or password');
+          }
+        });
+      </script>
+  </form>
+
+</body>
+
+</html>

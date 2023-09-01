@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Cart Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cart-page {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .items-grid {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .item {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-gap: 10px;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .item-image img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .product-name {
+            font-weight: bold;
+        }
+
+        .delete-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: red;
+            font-size: 1.2rem;
+        }
+
+        .quantity-form {
+            height: 120px;
+            min-width: 380px;
+            background-color:#fff;
+            display: flex;
+            border-radius: 12px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .quantity-form span {
+            width: 100%;
+            text-align: center;
+            font-size: 55px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .quantity-form span.num {
+            font-size: 50px;
+            border-left: 2px solid rgba(0, 0, 0, 0.2);
+            border-right: 2px solid rgba(0, 0, 0, 0.2);
+            pointer-events: none;
+        }
+
+        .quantity-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .summary {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .summary-card {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-price-total,
+        .shipping,
+        .total-cost {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .product-price-total p,
+        .shipping p,
+        .total-cost p {
+            font-weight: bold;
+        }
+
+        hr {
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+
+        .checkout-btn {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .checkout-btn button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cart-page">
+        <div class="items-grid">
+            <h2>Items in Cart</h2>
+            <div class="item">
+                <div class="item-image">
+                    <img src="../images/mens/hoodie1.jpg" alt="Product Image">
+                </div>
+                <div class="item-details">
+                    <p class="product-name">B/W Hoodie</p>
+                    <p class="product-price">Rs.549</p>
+                    <button class="delete-button"><i class="fa fa-trash"></i></button>
+                </div>
+                <div class="quantity-form">
+                    <span class="minus">-</span>
+                    <span class="num">01</span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="summary-card">
+                <div class="card-header">
+                    <h2>Summary</h2>
+                    <hr>
+                </div>
+                <div class="product-price-total">
+                    <p>Product Price (Total)</p>
+                    <p>Rs.549</p>
+                </div>
+                <div class="shipping">
+                    <p>Shipping</p>
+                    <p>Rs.51</p>
+                </div>
+                <hr>
+                <div class="total-cost">
+                    <p>Total Cost</p>
+                    <p>Rs.600</p>
+                </div>
+                <div class="checkout-btn">
+                    <button>Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const plus=document.querySelector(".plus"),
+         minus=document.querySelector(".minus"),
+        num=document.querySelector(".num");
+
+        let a=1;
+    plus.addEventListener("click",()=>{
+        a++;
+        a=(a<10) ?"0"+a:a;
+        num.innerHTML=a;
+        console.log(a);
+    });
+    minus.addEventListener("click",()=>{
+        a--;
+        a=(a<10) ?"0"+a:a;
+        num.innerHTML=a;
+        console.log(a);
+    });
+
+    </script>
+</body>
+
+</html>
